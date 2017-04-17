@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-path-to-regexp/path-to-regexp/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-path-to-regexp/node_modules/path-to-regexp/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-path-to-regexp">npmtest-path-to-regexp (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-path-to-regexp/path-to-regexp/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-path-to-regexp/node_modules/path-to-regexp/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">13.38% <small>(21 / 157)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-path-to-regexp/path-to-regexp/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-path-to-regexp/node_modules/path-to-regexp/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -1104,48 +1102,48 @@ var PATH_REGEXP = new RegExp([
  * @param  {Object=} options
  * @return {!Array}
  */
-<span class="fstat-no" title="function not covered" >function parse (str, options) {</span>
-<span class="cstat-no" title="statement not covered" >  var tokens = []</span>
-<span class="cstat-no" title="statement not covered" >  var key = 0</span>
-<span class="cstat-no" title="statement not covered" >  var index = 0</span>
-<span class="cstat-no" title="statement not covered" >  var path = ''</span>
-<span class="cstat-no" title="statement not covered" >  var defaultDelimiter = options &amp;&amp; options.delimiter || '/'</span>
-<span class="cstat-no" title="statement not covered" >  var res</span>
+<span class="fstat-no" title="function not covered">function parse (str, options) {</span>
+<span class="cstat-no" title="statement not covered">  var tokens = []</span>
+<span class="cstat-no" title="statement not covered">  var key = 0</span>
+<span class="cstat-no" title="statement not covered">  var index = 0</span>
+<span class="cstat-no" title="statement not covered">  var path = ''</span>
+<span class="cstat-no" title="statement not covered">  var defaultDelimiter = options &amp;&amp; options.delimiter || '/'</span>
+<span class="cstat-no" title="statement not covered">  var res</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  while ((res = PATH_REGEXP.exec(str)) != null) {</span>
-<span class="cstat-no" title="statement not covered" >    var m = res[0]</span>
-<span class="cstat-no" title="statement not covered" >    var escaped = res[1]</span>
-<span class="cstat-no" title="statement not covered" >    var offset = res.index</span>
-<span class="cstat-no" title="statement not covered" >    path += str.slice(index, offset)</span>
-<span class="cstat-no" title="statement not covered" >    index = offset + m.length</span>
+<span class="cstat-no" title="statement not covered">  while ((res = PATH_REGEXP.exec(str)) != null) {</span>
+<span class="cstat-no" title="statement not covered">    var m = res[0]</span>
+<span class="cstat-no" title="statement not covered">    var escaped = res[1]</span>
+<span class="cstat-no" title="statement not covered">    var offset = res.index</span>
+<span class="cstat-no" title="statement not covered">    path += str.slice(index, offset)</span>
+<span class="cstat-no" title="statement not covered">    index = offset + m.length</span>
 &nbsp;
     // Ignore already escaped sequences.
-<span class="cstat-no" title="statement not covered" >    if (escaped) {</span>
-<span class="cstat-no" title="statement not covered" >      path += escaped[1]</span>
-<span class="cstat-no" title="statement not covered" >      continue</span>
+<span class="cstat-no" title="statement not covered">    if (escaped) {</span>
+<span class="cstat-no" title="statement not covered">      path += escaped[1]</span>
+<span class="cstat-no" title="statement not covered">      continue</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var next = str[index]</span>
-<span class="cstat-no" title="statement not covered" >    var prefix = res[2]</span>
-<span class="cstat-no" title="statement not covered" >    var name = res[3]</span>
-<span class="cstat-no" title="statement not covered" >    var capture = res[4]</span>
-<span class="cstat-no" title="statement not covered" >    var group = res[5]</span>
-<span class="cstat-no" title="statement not covered" >    var modifier = res[6]</span>
-<span class="cstat-no" title="statement not covered" >    var asterisk = res[7]</span>
+<span class="cstat-no" title="statement not covered">    var next = str[index]</span>
+<span class="cstat-no" title="statement not covered">    var prefix = res[2]</span>
+<span class="cstat-no" title="statement not covered">    var name = res[3]</span>
+<span class="cstat-no" title="statement not covered">    var capture = res[4]</span>
+<span class="cstat-no" title="statement not covered">    var group = res[5]</span>
+<span class="cstat-no" title="statement not covered">    var modifier = res[6]</span>
+<span class="cstat-no" title="statement not covered">    var asterisk = res[7]</span>
 &nbsp;
     // Push the current path onto the tokens.
-<span class="cstat-no" title="statement not covered" >    if (path) {</span>
-<span class="cstat-no" title="statement not covered" >      tokens.push(path)</span>
-<span class="cstat-no" title="statement not covered" >      path = ''</span>
+<span class="cstat-no" title="statement not covered">    if (path) {</span>
+<span class="cstat-no" title="statement not covered">      tokens.push(path)</span>
+<span class="cstat-no" title="statement not covered">      path = ''</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var partial = prefix != null &amp;&amp; next != null &amp;&amp; next !== prefix</span>
-<span class="cstat-no" title="statement not covered" >    var repeat = modifier === '+' || modifier === '*'</span>
-<span class="cstat-no" title="statement not covered" >    var optional = modifier === '?' || modifier === '*'</span>
-<span class="cstat-no" title="statement not covered" >    var delimiter = res[2] || defaultDelimiter</span>
-<span class="cstat-no" title="statement not covered" >    var pattern = capture || group</span>
+<span class="cstat-no" title="statement not covered">    var partial = prefix != null &amp;&amp; next != null &amp;&amp; next !== prefix</span>
+<span class="cstat-no" title="statement not covered">    var repeat = modifier === '+' || modifier === '*'</span>
+<span class="cstat-no" title="statement not covered">    var optional = modifier === '?' || modifier === '*'</span>
+<span class="cstat-no" title="statement not covered">    var delimiter = res[2] || defaultDelimiter</span>
+<span class="cstat-no" title="statement not covered">    var pattern = capture || group</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    tokens.push({</span>
+<span class="cstat-no" title="statement not covered">    tokens.push({</span>
       name: name || key++,
       prefix: prefix || '',
       delimiter: delimiter,
@@ -1158,16 +1156,16 @@ var PATH_REGEXP = new RegExp([
   }
 &nbsp;
   // Match any characters still remaining.
-<span class="cstat-no" title="statement not covered" >  if (index &lt; str.length) {</span>
-<span class="cstat-no" title="statement not covered" >    path += str.substr(index)</span>
+<span class="cstat-no" title="statement not covered">  if (index &lt; str.length) {</span>
+<span class="cstat-no" title="statement not covered">    path += str.substr(index)</span>
   }
 &nbsp;
   // If the path exists, push it onto the end.
-<span class="cstat-no" title="statement not covered" >  if (path) {</span>
-<span class="cstat-no" title="statement not covered" >    tokens.push(path)</span>
+<span class="cstat-no" title="statement not covered">  if (path) {</span>
+<span class="cstat-no" title="statement not covered">    tokens.push(path)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return tokens</span>
+<span class="cstat-no" title="statement not covered">  return tokens</span>
 }
 &nbsp;
 /**
@@ -1177,8 +1175,8 @@ var PATH_REGEXP = new RegExp([
  * @param  {Object=}            options
  * @return {!function(Object=, Object=)}
  */
-<span class="fstat-no" title="function not covered" >function compile (str, options) {</span>
-<span class="cstat-no" title="statement not covered" >  return tokensToFunction(parse(str, options))</span>
+<span class="fstat-no" title="function not covered">function compile (str, options) {</span>
+<span class="cstat-no" title="statement not covered">  return tokensToFunction(parse(str, options))</span>
 }
 &nbsp;
 /**
@@ -1187,9 +1185,9 @@ var PATH_REGEXP = new RegExp([
  * @param  {string}
  * @return {string}
  */
-<span class="fstat-no" title="function not covered" >function encodeURIComponentPretty (str) {</span>
-<span class="cstat-no" title="statement not covered" >  return encodeURI(str).replace(/[\/?#]/g, <span class="fstat-no" title="function not covered" >function (c) {</span></span>
-<span class="cstat-no" title="statement not covered" >    return '%' + c.charCodeAt(0).toString(16).toUpperCase()</span>
+<span class="fstat-no" title="function not covered">function encodeURIComponentPretty (str) {</span>
+<span class="cstat-no" title="statement not covered">  return encodeURI(str).replace(/[\/?#]/g, <span class="fstat-no" title="function not covered">function (c) {</span></span>
+<span class="cstat-no" title="statement not covered">    return '%' + c.charCodeAt(0).toString(16).toUpperCase()</span>
   })
 }
 &nbsp;
@@ -1199,93 +1197,93 @@ var PATH_REGEXP = new RegExp([
  * @param  {string}
  * @return {string}
  */
-<span class="fstat-no" title="function not covered" >function encodeAsterisk (str) {</span>
-<span class="cstat-no" title="statement not covered" >  return encodeURI(str).replace(/[?#]/g, <span class="fstat-no" title="function not covered" >function (c) {</span></span>
-<span class="cstat-no" title="statement not covered" >    return '%' + c.charCodeAt(0).toString(16).toUpperCase()</span>
+<span class="fstat-no" title="function not covered">function encodeAsterisk (str) {</span>
+<span class="cstat-no" title="statement not covered">  return encodeURI(str).replace(/[?#]/g, <span class="fstat-no" title="function not covered">function (c) {</span></span>
+<span class="cstat-no" title="statement not covered">    return '%' + c.charCodeAt(0).toString(16).toUpperCase()</span>
   })
 }
 &nbsp;
 /**
  * Expose a method for transforming tokens into the path function.
  */
-<span class="fstat-no" title="function not covered" >function tokensToFunction (tokens) {</span>
+<span class="fstat-no" title="function not covered">function tokensToFunction (tokens) {</span>
   // Compile all the tokens into regexps.
-<span class="cstat-no" title="statement not covered" >  var matches = new Array(tokens.length)</span>
+<span class="cstat-no" title="statement not covered">  var matches = new Array(tokens.length)</span>
 &nbsp;
   // Compile all the patterns before compilation.
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; tokens.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof tokens[i] === 'object') {</span>
-<span class="cstat-no" title="statement not covered" >      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$')</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; tokens.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    if (typeof tokens[i] === 'object') {</span>
+<span class="cstat-no" title="statement not covered">      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$')</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >function (obj, opts) {</span></span>
-<span class="cstat-no" title="statement not covered" >    var path = ''</span>
-<span class="cstat-no" title="statement not covered" >    var data = obj || {}</span>
-<span class="cstat-no" title="statement not covered" >    var options = opts || {}</span>
-<span class="cstat-no" title="statement not covered" >    var encode = options.pretty ? encodeURIComponentPretty : encodeURIComponent</span>
+<span class="cstat-no" title="statement not covered">  return <span class="fstat-no" title="function not covered">function (obj, opts) {</span></span>
+<span class="cstat-no" title="statement not covered">    var path = ''</span>
+<span class="cstat-no" title="statement not covered">    var data = obj || {}</span>
+<span class="cstat-no" title="statement not covered">    var options = opts || {}</span>
+<span class="cstat-no" title="statement not covered">    var encode = options.pretty ? encodeURIComponentPretty : encodeURIComponent</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; tokens.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      var token = tokens[i]</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; tokens.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      var token = tokens[i]</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (typeof token === 'string') {</span>
-<span class="cstat-no" title="statement not covered" >        path += token</span>
+<span class="cstat-no" title="statement not covered">      if (typeof token === 'string') {</span>
+<span class="cstat-no" title="statement not covered">        path += token</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        continue</span>
+<span class="cstat-no" title="statement not covered">        continue</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      var value = data[token.name]</span>
-<span class="cstat-no" title="statement not covered" >      var segment</span>
+<span class="cstat-no" title="statement not covered">      var value = data[token.name]</span>
+<span class="cstat-no" title="statement not covered">      var segment</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (value == null) {</span>
-<span class="cstat-no" title="statement not covered" >        if (token.optional) {</span>
+<span class="cstat-no" title="statement not covered">      if (value == null) {</span>
+<span class="cstat-no" title="statement not covered">        if (token.optional) {</span>
           // Prepend partial segment prefixes.
-<span class="cstat-no" title="statement not covered" >          if (token.partial) {</span>
-<span class="cstat-no" title="statement not covered" >            path += token.prefix</span>
+<span class="cstat-no" title="statement not covered">          if (token.partial) {</span>
+<span class="cstat-no" title="statement not covered">            path += token.prefix</span>
           }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          continue</span>
+<span class="cstat-no" title="statement not covered">          continue</span>
         } else {
-<span class="cstat-no" title="statement not covered" >          throw new TypeError('Expected "' + token.name + '" to be defined')</span>
+<span class="cstat-no" title="statement not covered">          throw new TypeError('Expected "' + token.name + '" to be defined')</span>
         }
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (isarray(value)) {</span>
-<span class="cstat-no" title="statement not covered" >        if (!token.repeat) {</span>
-<span class="cstat-no" title="statement not covered" >          throw new TypeError('Expected "' + token.name + '" to not repeat, but received `' + JSON.stringify(value) + '`')</span>
+<span class="cstat-no" title="statement not covered">      if (isarray(value)) {</span>
+<span class="cstat-no" title="statement not covered">        if (!token.repeat) {</span>
+<span class="cstat-no" title="statement not covered">          throw new TypeError('Expected "' + token.name + '" to not repeat, but received `' + JSON.stringify(value) + '`')</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (value.length === 0) {</span>
-<span class="cstat-no" title="statement not covered" >          if (token.optional) {</span>
-<span class="cstat-no" title="statement not covered" >            continue</span>
+<span class="cstat-no" title="statement not covered">        if (value.length === 0) {</span>
+<span class="cstat-no" title="statement not covered">          if (token.optional) {</span>
+<span class="cstat-no" title="statement not covered">            continue</span>
           } else {
-<span class="cstat-no" title="statement not covered" >            throw new TypeError('Expected "' + token.name + '" to not be empty')</span>
+<span class="cstat-no" title="statement not covered">            throw new TypeError('Expected "' + token.name + '" to not be empty')</span>
           }
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        for (var j = 0; j &lt; value.length; j++) {</span>
-<span class="cstat-no" title="statement not covered" >          segment = encode(value[j])</span>
+<span class="cstat-no" title="statement not covered">        for (var j = 0; j &lt; value.length; j++) {</span>
+<span class="cstat-no" title="statement not covered">          segment = encode(value[j])</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          if (!matches[i].test(segment)) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but received `' + JSON.stringify(segment) + '`')</span>
+<span class="cstat-no" title="statement not covered">          if (!matches[i].test(segment)) {</span>
+<span class="cstat-no" title="statement not covered">            throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but received `' + JSON.stringify(segment) + '`')</span>
           }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          path += (j === 0 ? token.prefix : token.delimiter) + segment</span>
+<span class="cstat-no" title="statement not covered">          path += (j === 0 ? token.prefix : token.delimiter) + segment</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        continue</span>
+<span class="cstat-no" title="statement not covered">        continue</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      segment = token.asterisk ? encodeAsterisk(value) : encode(value)</span>
+<span class="cstat-no" title="statement not covered">      segment = token.asterisk ? encodeAsterisk(value) : encode(value)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (!matches[i].test(segment)) {</span>
-<span class="cstat-no" title="statement not covered" >        throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but received "' + segment + '"')</span>
+<span class="cstat-no" title="statement not covered">      if (!matches[i].test(segment)) {</span>
+<span class="cstat-no" title="statement not covered">        throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but received "' + segment + '"')</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      path += token.prefix + segment</span>
+<span class="cstat-no" title="statement not covered">      path += token.prefix + segment</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return path</span>
+<span class="cstat-no" title="statement not covered">    return path</span>
   }
 }
 &nbsp;
@@ -1295,8 +1293,8 @@ var PATH_REGEXP = new RegExp([
  * @param  {string} str
  * @return {string}
  */
-<span class="fstat-no" title="function not covered" >function escapeString (str) {</span>
-<span class="cstat-no" title="statement not covered" >  return str.replace(/([.+*?=^!:${}()[\]|\/\\])/g, '\\$1')</span>
+<span class="fstat-no" title="function not covered">function escapeString (str) {</span>
+<span class="cstat-no" title="statement not covered">  return str.replace(/([.+*?=^!:${}()[\]|\/\\])/g, '\\$1')</span>
 }
 &nbsp;
 /**
@@ -1305,8 +1303,8 @@ var PATH_REGEXP = new RegExp([
  * @param  {string} group
  * @return {string}
  */
-<span class="fstat-no" title="function not covered" >function escapeGroup (group) {</span>
-<span class="cstat-no" title="statement not covered" >  return group.replace(/([=!:$\/()])/g, '\\$1')</span>
+<span class="fstat-no" title="function not covered">function escapeGroup (group) {</span>
+<span class="cstat-no" title="statement not covered">  return group.replace(/([=!:$\/()])/g, '\\$1')</span>
 }
 &nbsp;
 /**
@@ -1316,9 +1314,9 @@ var PATH_REGEXP = new RegExp([
  * @param  {Array}   keys
  * @return {!RegExp}
  */
-<span class="fstat-no" title="function not covered" >function attachKeys (re, keys) {</span>
-<span class="cstat-no" title="statement not covered" >  re.keys = keys</span>
-<span class="cstat-no" title="statement not covered" >  return re</span>
+<span class="fstat-no" title="function not covered">function attachKeys (re, keys) {</span>
+<span class="cstat-no" title="statement not covered">  re.keys = keys</span>
+<span class="cstat-no" title="statement not covered">  return re</span>
 }
 &nbsp;
 /**
@@ -1327,8 +1325,8 @@ var PATH_REGEXP = new RegExp([
  * @param  {Object} options
  * @return {string}
  */
-<span class="fstat-no" title="function not covered" >function flags (options) {</span>
-<span class="cstat-no" title="statement not covered" >  return options.sensitive ? '' : 'i'</span>
+<span class="fstat-no" title="function not covered">function flags (options) {</span>
+<span class="cstat-no" title="statement not covered">  return options.sensitive ? '' : 'i'</span>
 }
 &nbsp;
 /**
@@ -1338,13 +1336,13 @@ var PATH_REGEXP = new RegExp([
  * @param  {!Array}  keys
  * @return {!RegExp}
  */
-<span class="fstat-no" title="function not covered" >function regexpToRegexp (path, keys) {</span>
+<span class="fstat-no" title="function not covered">function regexpToRegexp (path, keys) {</span>
   // Use a negative lookahead to match only capturing groups.
-<span class="cstat-no" title="statement not covered" >  var groups = path.source.match(/\((?!\?)/g)</span>
+<span class="cstat-no" title="statement not covered">  var groups = path.source.match(/\((?!\?)/g)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (groups) {</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; groups.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      keys.push({</span>
+<span class="cstat-no" title="statement not covered">  if (groups) {</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; groups.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      keys.push({</span>
         name: i,
         prefix: null,
         delimiter: null,
@@ -1357,7 +1355,7 @@ var PATH_REGEXP = new RegExp([
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return attachKeys(path, keys)</span>
+<span class="cstat-no" title="statement not covered">  return attachKeys(path, keys)</span>
 }
 &nbsp;
 /**
@@ -1368,16 +1366,16 @@ var PATH_REGEXP = new RegExp([
  * @param  {!Object} options
  * @return {!RegExp}
  */
-<span class="fstat-no" title="function not covered" >function arrayToRegexp (path, keys, options) {</span>
-<span class="cstat-no" title="statement not covered" >  var parts = []</span>
+<span class="fstat-no" title="function not covered">function arrayToRegexp (path, keys, options) {</span>
+<span class="cstat-no" title="statement not covered">  var parts = []</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; path.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    parts.push(pathToRegexp(path[i], keys, options).source)</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; path.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    parts.push(pathToRegexp(path[i], keys, options).source)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var regexp = new RegExp('(?:' + parts.join('|') + ')', flags(options))</span>
+<span class="cstat-no" title="statement not covered">  var regexp = new RegExp('(?:' + parts.join('|') + ')', flags(options))</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return attachKeys(regexp, keys)</span>
+<span class="cstat-no" title="statement not covered">  return attachKeys(regexp, keys)</span>
 }
 &nbsp;
 /**
@@ -1388,8 +1386,8 @@ var PATH_REGEXP = new RegExp([
  * @param  {!Object} options
  * @return {!RegExp}
  */
-<span class="fstat-no" title="function not covered" >function stringToRegexp (path, keys, options) {</span>
-<span class="cstat-no" title="statement not covered" >  return tokensToRegExp(parse(path, options), keys, options)</span>
+<span class="fstat-no" title="function not covered">function stringToRegexp (path, keys, options) {</span>
+<span class="cstat-no" title="statement not covered">  return tokensToRegExp(parse(path, options), keys, options)</span>
 }
 &nbsp;
 /**
@@ -1400,68 +1398,68 @@ var PATH_REGEXP = new RegExp([
  * @param  {Object=}         options
  * @return {!RegExp}
  */
-<span class="fstat-no" title="function not covered" >function tokensToRegExp (tokens, keys, options) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!isarray(keys)) {</span>
-<span class="cstat-no" title="statement not covered" >    options = /** @type {!Object} */ (keys || options)</span>
-<span class="cstat-no" title="statement not covered" >    keys = []</span>
+<span class="fstat-no" title="function not covered">function tokensToRegExp (tokens, keys, options) {</span>
+<span class="cstat-no" title="statement not covered">  if (!isarray(keys)) {</span>
+<span class="cstat-no" title="statement not covered">    options = /** @type {!Object} */ (keys || options)</span>
+<span class="cstat-no" title="statement not covered">    keys = []</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  options = options || {}</span>
+<span class="cstat-no" title="statement not covered">  options = options || {}</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var strict = options.strict</span>
-<span class="cstat-no" title="statement not covered" >  var end = options.end !== false</span>
-<span class="cstat-no" title="statement not covered" >  var route = ''</span>
+<span class="cstat-no" title="statement not covered">  var strict = options.strict</span>
+<span class="cstat-no" title="statement not covered">  var end = options.end !== false</span>
+<span class="cstat-no" title="statement not covered">  var route = ''</span>
 &nbsp;
   // Iterate over the tokens and create our regexp string.
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; tokens.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    var token = tokens[i]</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; tokens.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    var token = tokens[i]</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (typeof token === 'string') {</span>
-<span class="cstat-no" title="statement not covered" >      route += escapeString(token)</span>
+<span class="cstat-no" title="statement not covered">    if (typeof token === 'string') {</span>
+<span class="cstat-no" title="statement not covered">      route += escapeString(token)</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      var prefix = escapeString(token.prefix)</span>
-<span class="cstat-no" title="statement not covered" >      var capture = '(?:' + token.pattern + ')'</span>
+<span class="cstat-no" title="statement not covered">      var prefix = escapeString(token.prefix)</span>
+<span class="cstat-no" title="statement not covered">      var capture = '(?:' + token.pattern + ')'</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      keys.push(token)</span>
+<span class="cstat-no" title="statement not covered">      keys.push(token)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (token.repeat) {</span>
-<span class="cstat-no" title="statement not covered" >        capture += '(?:' + prefix + capture + ')*'</span>
+<span class="cstat-no" title="statement not covered">      if (token.repeat) {</span>
+<span class="cstat-no" title="statement not covered">        capture += '(?:' + prefix + capture + ')*'</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (token.optional) {</span>
-<span class="cstat-no" title="statement not covered" >        if (!token.partial) {</span>
-<span class="cstat-no" title="statement not covered" >          capture = '(?:' + prefix + '(' + capture + '))?'</span>
+<span class="cstat-no" title="statement not covered">      if (token.optional) {</span>
+<span class="cstat-no" title="statement not covered">        if (!token.partial) {</span>
+<span class="cstat-no" title="statement not covered">          capture = '(?:' + prefix + '(' + capture + '))?'</span>
         } else {
-<span class="cstat-no" title="statement not covered" >          capture = prefix + '(' + capture + ')?'</span>
+<span class="cstat-no" title="statement not covered">          capture = prefix + '(' + capture + ')?'</span>
         }
       } else {
-<span class="cstat-no" title="statement not covered" >        capture = prefix + '(' + capture + ')'</span>
+<span class="cstat-no" title="statement not covered">        capture = prefix + '(' + capture + ')'</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      route += capture</span>
+<span class="cstat-no" title="statement not covered">      route += capture</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var delimiter = escapeString(options.delimiter || '/')</span>
-<span class="cstat-no" title="statement not covered" >  var endsWithDelimiter = route.slice(-delimiter.length) === delimiter</span>
+<span class="cstat-no" title="statement not covered">  var delimiter = escapeString(options.delimiter || '/')</span>
+<span class="cstat-no" title="statement not covered">  var endsWithDelimiter = route.slice(-delimiter.length) === delimiter</span>
 &nbsp;
   // In non-strict mode we allow a slash at the end of match. If the path to
   // match already ends with a slash, we remove it for consistency. The slash
   // is valid at the end of a path match, not in the middle. This is important
   // in non-ending mode, where "/test/" shouldn't match "/test//route".
-<span class="cstat-no" title="statement not covered" >  if (!strict) {</span>
-<span class="cstat-no" title="statement not covered" >    route = (endsWithDelimiter ? route.slice(0, -delimiter.length) : route) + '(?:' + delimiter + '(?=$))?'</span>
+<span class="cstat-no" title="statement not covered">  if (!strict) {</span>
+<span class="cstat-no" title="statement not covered">    route = (endsWithDelimiter ? route.slice(0, -delimiter.length) : route) + '(?:' + delimiter + '(?=$))?'</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (end) {</span>
-<span class="cstat-no" title="statement not covered" >    route += '$'</span>
+<span class="cstat-no" title="statement not covered">  if (end) {</span>
+<span class="cstat-no" title="statement not covered">    route += '$'</span>
   } else {
     // In non-ending mode, we need the capturing groups to match as much as
     // possible by using a positive lookahead to the end or next path segment.
-<span class="cstat-no" title="statement not covered" >    route += strict &amp;&amp; endsWithDelimiter ? '' : '(?=' + delimiter + '|$)'</span>
+<span class="cstat-no" title="statement not covered">    route += strict &amp;&amp; endsWithDelimiter ? '' : '(?=' + delimiter + '|$)'</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return attachKeys(new RegExp('^' + route, flags(options)), keys)</span>
+<span class="cstat-no" title="statement not covered">  return attachKeys(new RegExp('^' + route, flags(options)), keys)</span>
 }
 &nbsp;
 /**
@@ -1476,30 +1474,31 @@ var PATH_REGEXP = new RegExp([
  * @param  {Object=}               options
  * @return {!RegExp}
  */
-<span class="fstat-no" title="function not covered" >function pathToRegexp (path, keys, options) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!isarray(keys)) {</span>
-<span class="cstat-no" title="statement not covered" >    options = /** @type {!Object} */ (keys || options)</span>
-<span class="cstat-no" title="statement not covered" >    keys = []</span>
+<span class="fstat-no" title="function not covered">function pathToRegexp (path, keys, options) {</span>
+<span class="cstat-no" title="statement not covered">  if (!isarray(keys)) {</span>
+<span class="cstat-no" title="statement not covered">    options = /** @type {!Object} */ (keys || options)</span>
+<span class="cstat-no" title="statement not covered">    keys = []</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  options = options || {}</span>
+<span class="cstat-no" title="statement not covered">  options = options || {}</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (path instanceof RegExp) {</span>
-<span class="cstat-no" title="statement not covered" >    return regexpToRegexp(path, /** @type {!Array} */ (keys))</span>
+<span class="cstat-no" title="statement not covered">  if (path instanceof RegExp) {</span>
+<span class="cstat-no" title="statement not covered">    return regexpToRegexp(path, /** @type {!Array} */ (keys))</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (isarray(path)) {</span>
-<span class="cstat-no" title="statement not covered" >    return arrayToRegexp(/** @type {!Array} */ (path), /** @type {!Array} */ (keys), options)</span>
+<span class="cstat-no" title="statement not covered">  if (isarray(path)) {</span>
+<span class="cstat-no" title="statement not covered">    return arrayToRegexp(/** @type {!Array} */ (path), /** @type {!Array} */ (keys), options)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)</span>
+<span class="cstat-no" title="statement not covered">  return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 10:46:46 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 11:09:26 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
