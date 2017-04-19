@@ -1,4 +1,7 @@
-# test coverage for  [path-to-regexp (v1.7.0)](https://github.com/pillarjs/path-to-regexp#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-path-to-regexp.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-path-to-regexp) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-path-to-regexp.svg)](https://travis-ci.org/npmtest/node-npmtest-path-to-regexp)
+# npmtest-path-to-regexp
+
+#### test coverage for  [path-to-regexp (v1.7.0)](https://github.com/pillarjs/path-to-regexp#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-path-to-regexp.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-path-to-regexp) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-path-to-regexp.svg)](https://travis-ci.org/npmtest/node-npmtest-path-to-regexp)
+
 #### Express style path to RegExp utility
 
 [![NPM](https://nodei.co/npm/path-to-regexp.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/path-to-regexp)
