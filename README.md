@@ -1,6 +1,6 @@
 # npmtest-path-to-regexp
 
-#### test coverage for  [path-to-regexp (v1.7.0)](https://github.com/pillarjs/path-to-regexp#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-path-to-regexp.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-path-to-regexp) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-path-to-regexp.svg)](https://travis-ci.org/npmtest/node-npmtest-path-to-regexp)
+#### basic test coverage for  [path-to-regexp (v1.7.0)](https://github.com/pillarjs/path-to-regexp#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-path-to-regexp.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-path-to-regexp) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-path-to-regexp.svg)](https://travis-ci.org/npmtest/node-npmtest-path-to-regexp)
 
 #### Express style path to RegExp utility
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-path-to-regexp/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-path-to-regexp/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-path-to-regexp/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-path-to-regexp/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-path-to-regexp/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-path-to-regexp/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-path-to-regexp/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-path-to-regexp/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-path-to-regexp/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-path-to-regexp/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-path-to-regexp/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-path-to-regexp/build/coverage.html/index.html)
 
@@ -188,7 +188,8 @@
         "test-spec": "mocha --require ts-node/register -R spec --bail test.ts"
     },
     "typings": "index.d.ts",
-    "version": "1.7.0"
+    "version": "1.7.0",
+    "bin": {}
 }
 ```
 
